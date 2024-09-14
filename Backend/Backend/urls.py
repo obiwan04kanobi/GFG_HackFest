@@ -29,5 +29,16 @@ urlpatterns = [
     # URL for Signin and Signup Pages (GET requests)
     path('signin/', views.signin_page, name='signin_page'),  # This is for rendering the signin form (GET request)
     path('signup/', views.signup_page, name='signup_page'),  # This is for rendering the signup form (GET request)
+
+    path('api/hospitals/', views.get_hospitals, name='get_hospitals'),
+    path('api/add_hospital/', views.add_hospital, name='add_hospital'),
+
+    path('hospitals/', views.hospitals, name='hospitals'),
+    path('list_hospitals/', views.list_hospitals_page, name='list_hospitals_page'),
+
+    path('api/cities/', views.get_cities, name='get_cities'),
+    path('api/hospitals/', views.hospitals, name='hospitals'),
+
+    path('search/', views.search_hospitals, name='search_hospitals'),
 ]
 
