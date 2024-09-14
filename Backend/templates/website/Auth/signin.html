@@ -1,0 +1,55 @@
+<!-- signin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body class="bg-gray-100">
+
+  <div class="flex justify-center items-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+      <h2 class="text-2xl font-bold text-center mb-6">Log In</h2>
+      <form id="login-form">
+        <div class="mb-4">
+          <label class="block text-gray-700">Email</label>
+          <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700">Password</label>
+          <input type="password" id="password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+        </div>
+        <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500">Log In</button>
+      </form>
+      <div class="text-center mt-4">
+        <p>Don't have an account? <a href="{% url 'signup_page' %}" class="text-blue-600">Sign Up</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $("#login-form").on("submit", function(e) {
+      e.preventDefault();
+      $.ajax({
+        url: '/api/login/',  // Use the correct API URL here
+        method: 'POST',
+        data: {
+          email: $("#email").val(),
+          password: $("#password").val(),
+          csrfmiddlewaretoken: '{{ csrf_token }}'
+        },
+        success: function(response) {
+          alert("Login successful!");
+          window.location.href = '/dashboard/';  // Redirect upon successful login
+        },
+        error: function(xhr, status, error) {
+          alert("Error: " + xhr.responseText);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

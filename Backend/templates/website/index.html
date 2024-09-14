@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Healthcare Bed Availability
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-blue-600 text-white">
+    <div class="container mx-auto px-4 py-20 text-center">
+        <h1 class="text-4xl font-bold">Find Hospital Beds Near You, Instantly</h1>
+        <p class="mt-4 text-lg">Get real-time updates on bed availability and reserve your spot in the queue.</p>
+        <a href="#"
+            class="mt-8 inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200">Check
+            Bed Availability</a>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800">Our Features</h2>
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-blue-600">Real-time Updates</h3>
+                <p class="mt-4 text-gray-600">Stay informed with live updates on bed availability in nearby hospitals.
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-blue-600">Secure Queue Booking</h3>
+                <p class="mt-4 text-gray-600">Book your bed in advance, but it will only be confirmed after due
+                    diligence at the hospital.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-blue-600">Emergency Services</h3>
+                <p class="mt-4 text-gray-600">Quickly locate emergency beds at hospitals near you during critical
+                    situations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Hospitals Section -->
+<section id="hospitals" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800">Hospitals We Cover</h2>
+        <p class="mt-4 text-center text-gray-600">Our platform covers hospitals across the region, ensuring you get the
+            care you need.</p>
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Hospital 1 -->
+            <div class="bg-gray-100 p-6 rounded-lg text-center">
+                <h3 class="text-xl font-semibold text-gray-700">City General Hospital</h3>
+                <p class="mt-4 text-gray-600">Providing ICU, Emergency, and General Ward services.</p>
+                <a href="#" class="mt-4 inline-block text-blue-600 font-semibold hover:underline">View Details</a>
+            </div>
+            <!-- Hospital 2 -->
+            <div class="bg-gray-100 p-6 rounded-lg text-center">
+                <h3 class="text-xl font-semibold text-gray-700">Metro Health Center</h3>
+                <p class="mt-4 text-gray-600">Specialized in critical care with real-time ICU availability.</p>
+                <a href="#" class="mt-4 inline-block text-blue-600 font-semibold hover:underline">View Details</a>
+            </div>
+            <!-- Hospital 3 -->
+            <div class="bg-gray-100 p-6 rounded-lg text-center">
+                <h3 class="text-xl font-semibold text-gray-700">Unity Emergency Hospital</h3>
+                <p class="mt-4 text-gray-600">Emergency and trauma care specialists with live bed tracking.</p>
+                <a href="#" class="mt-4 inline-block text-blue-600 font-semibold hover:underline">View Details</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
